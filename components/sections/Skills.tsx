@@ -27,9 +27,7 @@ const skillCategories = [
 
 export default function Skills() {
   return (
-    <section className="py-16 px-4 md:px-10 bg-zinc-950 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black opacity-50" />
+    <section className="py-16 px-4 md:px-10 relative overflow-hidden">
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Header */}
