@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Briefcase, Calendar, Code } from 'lucide-react';
 
 const experiences = [
@@ -26,27 +25,15 @@ export default function Experience() {
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex items-center gap-3 mb-4"
-          >
+          <div className="flex items-center gap-3 mb-4">
             <Briefcase className="w-6 h-6 text-purple-400" />
             <h2 className="text-sm font-mono text-purple-400 uppercase tracking-widest">
               Work Experience
             </h2>
-          </motion.div>
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="text-4xl md:text-6xl font-bold font-space text-white"
-          >
+          </div>
+          <h3 className="text-4xl md:text-6xl font-bold font-space text-white">
             Professional Journey
-          </motion.h3>
+          </h3>
         </div>
 
         {/* Experience Cards */}

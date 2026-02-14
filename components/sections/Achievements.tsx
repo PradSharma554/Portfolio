@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { Trophy, Target } from 'lucide-react';
 
 const achievements = [
@@ -51,27 +50,15 @@ export default function Achievements() {
 
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="flex items-center gap-3 mb-4"
-          >
+          <div className="flex items-center gap-3 mb-4">
             <Trophy className="w-6 h-6 text-purple-400" />
             <h2 className="text-sm font-mono text-purple-400 uppercase tracking-widest">
               Achievements & Interests
             </h2>
-          </motion.div>
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="text-4xl md:text-6xl font-bold font-space text-white"
-          >
+          </div>
+          <h3 className="text-4xl md:text-6xl font-bold font-space text-white">
             Recognition & Passions
-          </motion.h3>
+          </h3>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
@@ -82,12 +69,8 @@ export default function Achievements() {
             </h4>
             <div className="space-y-4">
               {achievements.map((achievement, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true, amount: 0.3 }}
                   className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-lg p-4 hover:border-purple-500/30 transition-all duration-300"
                 >
                   <div className="flex items-start gap-3">
@@ -104,7 +87,7 @@ export default function Achievements() {
                       </p>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -114,13 +97,7 @@ export default function Achievements() {
               <Target className="w-5 h-5 text-purple-400" />
               Areas of Interest
             </h4>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true, amount: 0.3 }}
-              className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300"
-            >
+            <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300">
               <div className="space-y-3">
                 {interests.map((interest, index) => (
                   <div
@@ -132,7 +109,7 @@ export default function Achievements() {
                   </div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

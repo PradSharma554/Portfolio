@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { GraduationCap, Calendar } from 'lucide-react';
 
 const education = [
@@ -27,37 +26,21 @@ export default function Education() {
 
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="flex items-center gap-3 mb-4"
-          >
+          <div className="flex items-center gap-3 mb-4">
             <GraduationCap className="w-6 h-6 text-purple-400" />
             <h2 className="text-sm font-mono text-purple-400 uppercase tracking-widest">
               Education
             </h2>
-          </motion.div>
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true, amount: 0.3 }}
-            className="text-4xl md:text-6xl font-bold font-space text-white"
-          >
+          </div>
+          <h3 className="text-4xl md:text-6xl font-bold font-space text-white">
             Academic Journey
-          </motion.h3>
+          </h3>
         </div>
 
         <div className="space-y-6">
           {education.map((edu, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true, amount: 0.3 }}
               className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300"
             >
               <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-4">
@@ -82,7 +65,7 @@ export default function Education() {
                   {edu.cgpa ? `CGPA: ${edu.cgpa}` : edu.marks}
                 </p>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
