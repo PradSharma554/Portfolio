@@ -1,4 +1,3 @@
-import SmoothScroll from '@/components/ui/SmoothScroll';
 import About from '@/components/sections/About';
 import Experience from '@/components/sections/Experience';
 import Skills from '@/components/sections/Skills';
@@ -10,7 +9,6 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 
 export default function AboutPage() {
   return (
-    <SmoothScroll>
       <main className="min-h-screen text-white w-full overflow-hidden">
         <ScrollReveal>
           <About />
@@ -34,6 +32,5 @@ export default function AboutPage() {
           <ProjectsCTA />
         </ScrollReveal>
       </main>
-    </SmoothScroll>
   );
 }

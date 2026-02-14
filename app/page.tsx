@@ -1,4 +1,3 @@
-import SmoothScroll from '@/components/ui/SmoothScroll';
 import Hero from '@/components/sections/Hero';
 
 import ProjectsCTA from '@/components/sections/ProjectsCTA';
@@ -7,7 +6,6 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 
 export default function Home() {
   return (
-    <SmoothScroll>
       <main className="min-h-screen text-white w-full overflow-hidden">
         <ScrollReveal>
           <Hero />
@@ -20,6 +18,5 @@ export default function Home() {
           <Contact />
         </ScrollReveal>
       </main>
-    </SmoothScroll>
   );
 }
