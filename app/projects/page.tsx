@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image'; // Import next/image for optimization
 import { ArrowLeft, Github, ExternalLink, ArrowUpRight } from 'lucide-react';
@@ -44,10 +45,11 @@ const projects = [
 
 export default function ProjectsPage() {
   const router = useRouter();
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     // <SmoothScroll> // Removed wrapper to revert to native scrolling for performance
-      <main className="bg-black min-h-screen text-white w-full overflow-x-hidden selection:bg-purple-500/30">
+      <main className="min-h-screen text-white w-full overflow-x-hidden selection:bg-purple-500/30">
         <div className="max-w-7xl mx-auto pt-32 pb-20 px-6 md:px-12 lg:px-20">
           
           {/* Header Section */}
@@ -76,33 +78,26 @@ export default function ProjectsPage() {
               <ScrollReveal key={project.id} viewportAmount={0.3} direction="up">
                 <div className={`group grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
                   
-                  {/* Image/Visual Area */}
-                  <div className={`relative aspect-[4/3] md:aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-white/10 group-hover:border-purple-500/50 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-purple-500/10 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                    
-                    {/* Project Image Background with Optimization */}
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      quality={85}
-                      priority={index === 0} // Prioritize LCP for first image
-                    />
-                    
-                     {/* Gradient Overlay for Text Readability */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 group-hover:opacity-10 transition-opacity duration-700 mix-blend-overlay`} />
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500" />
-                    
-                    <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                      <span className="text-xs font-mono text-purple-200 uppercase tracking-widest bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 shadow-lg">
-                        {project.category}
-                      </span>
+                  {/* Image/Visual Area - Click Interaction */}
+                  {project.id === 1 ? (
+                    // SupplyGuard: Open Popup
+                    <div 
+                      onClick={() => setSelectedImage(project.image)}
+                      className={`cursor-zoom-in relative aspect-[4/3] md:aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-white/10 group-hover:border-purple-500/50 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-purple-500/10 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}
+                    >
+                      <ProjectImageContent project={project} index={index} />
                     </div>
-
-                    {/* Overlay Noise */}
-                    <div className="absolute inset-0 bg-white/5 opacity-5 pointer-events-none mix-blend-overlay" />
-                  </div>
+                  ) : (
+                    // Others: Link to Live Demo
+                    <a 
+                      href={project.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={`block cursor-pointer relative aspect-[4/3] md:aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-white/10 group-hover:border-purple-500/50 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-purple-500/10 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}
+                    >
+                       <ProjectImageContent project={project} index={index} />
+                    </a>
+                  )}
 
                   {/* Content Area */}
                   <div className={`flex flex-col ${index % 2 === 1 ? 'lg:col-start-1 lg:items-end lg:text-right' : 'lg:items-start lg:text-left'}`}>
@@ -158,8 +153,62 @@ export default function ProjectsPage() {
             ))}
           </div>
 
+          {/* Image Popup Modal */}
+          {selectedImage && (
+            <div 
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm p-4 animate-in fade-in duration-200"
+              onClick={() => setSelectedImage(null)}
+            >
+              <div className="relative max-w-6xl max-h-[90vh] w-full h-full rounded-lg overflow-hidden flex items-center justify-center">
+                 <Image
+                    src={selectedImage}
+                    alt="Project Preview"
+                    fill
+                    className="object-contain"
+                    quality={100}
+                 />
+                 <button 
+                  className="absolute top-4 right-4 p-2 bg-black/50 hover:bg-white/20 rounded-full text-white transition-colors"
+                  onClick={() => setSelectedImage(null)}
+                 >
+                   <span className="sr-only">Close</span>
+                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                 </button>
+              </div>
+            </div>
+          )}
+
         </div>
       </main>
     // </SmoothScroll>
+  );
+}
+
+// Helper component to avoid repetition
+function ProjectImageContent({ project, index }: { project: any, index: number }) {
+  return (
+    <>
+      <Image
+        src={project.image}
+        alt={project.title}
+        fill
+        className="object-cover transition-transform duration-700 group-hover:scale-105"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        quality={85}
+        priority={index === 0}
+      />
+      
+      {/* Gradient Overlay */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 group-hover:opacity-10 transition-opacity duration-700 mix-blend-overlay`} />
+      <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500" />
+      
+      <div className="absolute bottom-6 left-6 right-6 flex justify-between items-end opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+        <span className="text-xs font-mono text-purple-200 uppercase tracking-widest bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 shadow-lg">
+          Click to View
+        </span>
+      </div>
+
+      <div className="absolute inset-0 bg-white/5 opacity-5 pointer-events-none mix-blend-overlay" />
+    </>
   );
 }

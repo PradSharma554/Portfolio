@@ -8,7 +8,7 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 export default function Home() {
   return (
     <SmoothScroll>
-      <main className="bg-black min-h-screen text-white w-full overflow-hidden">
+      <main className="min-h-screen text-white w-full overflow-hidden">
         <ScrollReveal>
           <Hero />
         </ScrollReveal>

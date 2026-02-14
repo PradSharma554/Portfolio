@@ -19,6 +19,8 @@ export const metadata: Metadata = {
   description: 'Full Stack Developer focused on building high-impact, smooth, and aesthetic web experiences.',
 };
 
+import HeroBackground from '@/components/canvas/HeroBackground';
+
 export default function RootLayout({
   children,
 }: {
@@ -26,7 +28,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
-      <body className={`${spaceGrotesk.variable} ${inter.variable} bg-black text-white antialiased selection:bg-purple-500/30 selection:text-purple-200`}>
+      <body className={`${spaceGrotesk.variable} ${inter.variable} text-white antialiased selection:bg-purple-500/30 selection:text-purple-200`}>
+        <HeroBackground />
         {children}
       </body>
     </html>

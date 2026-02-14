@@ -7,9 +7,7 @@ export default function ProjectsCTA() {
   const router = useRouter();
 
   return (
-    <section className="py-16 px-4 md:px-10 bg-black relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-to-b from-zinc-950 via-black to-zinc-950 opacity-50" />
+    <section className="py-16 px-4 md:px-10 relative overflow-hidden">
 
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Header */}

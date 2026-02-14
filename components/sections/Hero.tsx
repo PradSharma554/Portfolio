@@ -3,14 +3,14 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import HeroBackground from '@/components/canvas/HeroBackground';
+
 
 export default function Hero() {
   const router = useRouter();
 
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-      <HeroBackground />
+
 
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.div

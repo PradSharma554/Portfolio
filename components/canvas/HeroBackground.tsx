@@ -35,7 +35,7 @@ function Stars(props: any) {
 
 export default function HeroBackground() {
   return (
-    <div className="absolute inset-0 z-0 bg-black">
+    <div className="fixed inset-0 -z-10 bg-black">
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Stars />
       </Canvas>

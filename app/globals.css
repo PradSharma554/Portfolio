@@ -3,7 +3,7 @@
 @theme {
   --font-space: var(--font-space);
   --font-inter: var(--font-inter);
-  
+
   --color-black-main: #050505;
   --color-purple-primary: #8b5cf6;
   --color-purple-glow: rgba(139, 92, 246, 0.5);
@@ -11,10 +11,15 @@
 
 @layer base {
   body {
-    @apply bg-zinc-950 text-zinc-100 font-inter overflow-x-hidden;
+    @apply text-zinc-100 font-inter overflow-x-hidden;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-space font-bold tracking-tight;
   }
 }
@@ -23,15 +28,15 @@
   .text-glow {
     text-shadow: 0 0 20px var(--color-purple-glow);
   }
-  
+
   .glass-card {
     @apply bg-white/5 backdrop-blur-md border border-white/10;
   }
-  
+
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
-  
+
   .hide-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -39,7 +44,8 @@
 }
 
 /* Custom Locomotive Scroll / Lenis Scroll styling support if needed */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 

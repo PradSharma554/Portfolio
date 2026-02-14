@@ -11,7 +11,7 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 export default function AboutPage() {
   return (
     <SmoothScroll>
-      <main className="bg-black min-h-screen text-white w-full overflow-hidden">
+      <main className="min-h-screen text-white w-full overflow-hidden">
         <ScrollReveal>
           <About />
         </ScrollReveal>
