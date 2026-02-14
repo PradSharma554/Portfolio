@@ -8,7 +8,6 @@ export default function ProjectsCTA() {
 
   return (
     <section className="py-16 px-4 md:px-10 relative overflow-hidden">
-
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="mb-12">
@@ -29,7 +28,8 @@ export default function ProjectsCTA() {
             {/* Description */}
             <div>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Dive into a collection of projects showcasing blockchain innovation, full-stack development, and AI-powered solutions.
+                Dive into a collection of projects showcasing blockchain innovation, full-stack
+                development, and AI-powered solutions.
               </p>
             </div>
 
@@ -48,9 +48,9 @@ export default function ProjectsCTA() {
           {/* Project Preview Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-white/10">
             {[
-              { name: "SupplyGuard", category: "Blockchain" },
-              { name: "Toodl", category: "Full Stack" },
-              { name: "Coding Lantern", category: "AI Productivity" }
+              { name: 'SupplyGuard', category: 'Blockchain' },
+              { name: 'Toodl', category: 'Full Stack' },
+              { name: 'Coding Lantern', category: 'AI Productivity' },
             ].map((project, i) => (
               <div
                 key={i}

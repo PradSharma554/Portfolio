@@ -4,31 +4,30 @@ import { Code2, Layers } from 'lucide-react';
 
 const skillCategories = [
   {
-    title: "Languages",
-    skills: ["C++", "JavaScript"]
+    title: 'Languages',
+    skills: ['C++', 'JavaScript'],
   },
   {
-    title: "Backend",
-    skills: ["Node.js", "Express.js", "MongoDB"]
+    title: 'Backend',
+    skills: ['Node.js', 'Express.js', 'MongoDB'],
   },
   {
-    title: "Frontend",
-    skills: ["React.js", "Next.js", "Tailwind CSS"]
+    title: 'Frontend',
+    skills: ['React.js', 'Next.js', 'Tailwind CSS'],
   },
   {
-    title: "Tools",
-    skills: ["Git", "GitHub", "Postman"]
+    title: 'Tools',
+    skills: ['Git', 'GitHub', 'Postman'],
   },
   {
-    title: "CS Fundamentals",
-    skills: ["OOPS", "DBMS", "OS", "DSA", "System Design"]
-  }
+    title: 'CS Fundamentals',
+    skills: ['OOPS', 'DBMS', 'OS', 'DSA', 'System Design'],
+  },
 ];
 
 export default function Skills() {
   return (
     <section className="py-16 px-4 md:px-10 relative overflow-hidden">
-
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="mb-12">
@@ -38,9 +37,7 @@ export default function Skills() {
               Technical Skills
             </h2>
           </div>
-          <h3 className="text-4xl md:text-6xl font-bold font-space text-white">
-            Tech Arsenal
-          </h3>
+          <h3 className="text-4xl md:text-6xl font-bold font-space text-white">Tech Arsenal</h3>
         </div>
 
         {/* Skills Grid */}

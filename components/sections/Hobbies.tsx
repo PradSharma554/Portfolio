@@ -3,17 +3,16 @@
 import { Heart, Music, BookOpen, Dumbbell, Footprints, Plane } from 'lucide-react';
 
 const hobbies = [
-  { name: "Music & Singing", icon: Music },
-  { name: "Reading Books", icon: BookOpen },
-  { name: "Gym & Fitness", icon: Dumbbell },
-  { name: "Folk Dance", icon: Footprints },
-  { name: "Traveling", icon: Plane }
+  { name: 'Music & Singing', icon: Music },
+  { name: 'Reading Books', icon: BookOpen },
+  { name: 'Gym & Fitness', icon: Dumbbell },
+  { name: 'Folk Dance', icon: Footprints },
+  { name: 'Traveling', icon: Plane },
 ];
 
 export default function Hobbies() {
   return (
     <section className="py-16 px-4 md:px-10 relative overflow-hidden">
-
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
@@ -22,14 +21,14 @@ export default function Hobbies() {
               Hobbies & Interests
             </h2>
           </div>
-          <h3 className="text-4xl md:text-6xl font-bold font-space text-white">
-            Beyond Coding
-          </h3>
+          <h3 className="text-4xl md:text-6xl font-bold font-space text-white">Beyond Coding</h3>
         </div>
 
         <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:scale-[1.02] transition-all duration-300">
           <p className="text-gray-300 text-lg leading-relaxed mb-8">
-            Beyond coding, I am passionate about music, singing, reading books, going to the gym, folk dancing, and traveling. These diverse interests keep me balanced and continuously inspire my creative problem-solving in tech.
+            Beyond coding, I am passionate about music, singing, reading books, going to the gym,
+            folk dancing, and traveling. These diverse interests keep me balanced and continuously
+            inspire my creative problem-solving in tech.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">

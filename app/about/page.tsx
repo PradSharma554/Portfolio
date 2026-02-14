@@ -9,28 +9,28 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 
 export default function AboutPage() {
   return (
-      <main className="min-h-screen text-white w-full overflow-hidden">
-        <ScrollReveal>
-          <About />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Experience />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Skills />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Education />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Achievements />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Hobbies />
-        </ScrollReveal>
-        <ScrollReveal>
-          <ProjectsCTA />
-        </ScrollReveal>
-      </main>
+    <main className="min-h-screen text-white w-full overflow-hidden">
+      <ScrollReveal>
+        <About />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Experience />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Skills />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Education />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Achievements />
+      </ScrollReveal>
+      <ScrollReveal>
+        <Hobbies />
+      </ScrollReveal>
+      <ScrollReveal>
+        <ProjectsCTA />
+      </ScrollReveal>
+    </main>
   );
 }

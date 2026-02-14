@@ -16,7 +16,6 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-16 px-4 md:px-10 relative overflow-hidden">
-
       <div className="max-w-5xl mx-auto relative z-10">
         {/* Section Header */}
         <div className="mb-12">
@@ -40,9 +39,7 @@ export default function Contact() {
           >
             <div className="flex items-center gap-3 mb-4">
               <Mail className="w-5 h-5 text-purple-400" />
-              <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider">
-                Email
-              </h4>
+              <h4 className="text-sm font-bold text-gray-400 uppercase tracking-wider">Email</h4>
             </div>
             <p className="text-xl text-white group-hover:text-purple-400 transition-colors">
               pradyumanmusic@gmail.com
@@ -76,11 +73,11 @@ export default function Contact() {
             </div>
             <div className="flex gap-3 flex-wrap">
               {[
-                { icon: Github, href: "https://github.com/PradSharma554" },
-                { icon: Linkedin, href: "https://linkedin.com/in/pradyuman-5-sharma" },
-                { icon: Instagram, href: "https://www.instagram.com/pradyuman_._/" },
-                { icon: Twitter, href: "https://x.com/pradyum554" },
-                { icon: Facebook, href: "https://www.facebook.com/pradyuman.sharma.94801" }
+                { icon: Github, href: 'https://github.com/PradSharma554' },
+                { icon: Linkedin, href: 'https://linkedin.com/in/pradyuman-5-sharma' },
+                { icon: Instagram, href: 'https://www.instagram.com/pradyuman_._/' },
+                { icon: Twitter, href: 'https://x.com/pradyum554' },
+                { icon: Facebook, href: 'https://www.facebook.com/pradyuman.sharma.94801' },
               ].map((item, i) => (
                 <a
                   key={i}

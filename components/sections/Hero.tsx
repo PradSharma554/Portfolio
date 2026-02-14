@@ -4,27 +4,23 @@ import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 
-
 export default function Hero() {
   const router = useRouter();
 
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-
-
       <div className="relative z-10 container mx-auto px-4 text-center">
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: 'easeOut' }}
         >
-
           <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold tracking-tighter mix-blend-difference text-white mb-6">
             PRADYUMAN <br className="hidden md:block" /> SHARMA
           </h1>
         </motion.div>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
@@ -32,8 +28,8 @@ export default function Hero() {
         >
           Creative Developer & Software Engineer crafting high-impact digital experiences.
         </motion.p>
-        
-         <motion.div
+
+        <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
@@ -65,7 +61,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}

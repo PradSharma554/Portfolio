@@ -5,7 +5,6 @@ import { User, Sparkles } from 'lucide-react';
 export default function About() {
   return (
     <section className="py-16 px-4 md:px-10 relative overflow-hidden">
-
       <div className="max-w-5xl mx-auto relative z-10">
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-4">
@@ -22,13 +21,26 @@ export default function About() {
         <div className="space-y-8">
           <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:scale-[1.02] transition-all duration-300">
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              I am a final-year Computer Science student at Chandigarh University, driven by a love for technology and innovation. Currently working as an SDE-1 Intern at Zopdev, I specialize in building high-performance web applications using Next.js and the modern stack.
+              I am a final-year Computer Science student at Chandigarh University, driven by a love
+              for technology and innovation. Currently working as an SDE-1 Intern at Zopdev, I
+              specialize in building high-performance web applications using Next.js and the modern
+              stack.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              My journey is defined by a relentless pursuit of excellence—combining creative design with robust engineering. My strengths lie in <span className="text-purple-400 font-semibold">collaboration, creativity, problem-solving,</span> and an <span className="text-purple-400 font-semibold">endless curiosity for new technologies</span>. I am constantly evolving and get truly addicted to what I do.
+              My journey is defined by a relentless pursuit of excellence—combining creative design
+              with robust engineering. My strengths lie in{' '}
+              <span className="text-purple-400 font-semibold">
+                collaboration, creativity, problem-solving,
+              </span>{' '}
+              and an{' '}
+              <span className="text-purple-400 font-semibold">
+                endless curiosity for new technologies
+              </span>
+              . I am constantly evolving and get truly addicted to what I do.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Let's connect if you're looking for a developer who's passionate about innovation and cutting-edge technologies!
+              Let's connect if you're looking for a developer who's passionate about innovation and
+              cutting-edge technologies!
             </p>
           </div>
 
