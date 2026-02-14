@@ -37,15 +37,21 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.8, duration: 0.5 }}
-          className="flex justify-center gap-6"
+          className="flex flex-wrap justify-center gap-4"
         >
           <button
-            onClick={() => router.push('/projects')}
+            onClick={() => router.push('/about')}
             className="px-8 py-3 bg-white text-black font-bold uppercase hover:bg-purple-400 transition-colors rounded-full"
+          >
+            About Me
+          </button>
+          <button
+            onClick={() => router.push('/projects')}
+            className="px-8 py-3 border border-white/20 text-white font-bold uppercase hover:bg-white/10 transition-colors rounded-full"
           >
             View Work
           </button>
-          <button 
+          <button
             onClick={() => {
               const contactSection = document.getElementById('contact');
               if (contactSection) {
