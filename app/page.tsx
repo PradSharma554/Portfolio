@@ -2,8 +2,8 @@ import SmoothScroll from '@/components/ui/SmoothScroll';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Experience from '@/components/sections/Experience';
-import Projects from '@/components/sections/Projects';
 import Skills from '@/components/sections/Skills';
+import ProjectsCTA from '@/components/sections/ProjectsCTA';
 import Contact from '@/components/sections/Contact';
 
 export default function Home() {
@@ -13,8 +13,8 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
-        <Projects />
         <Skills />
+        <ProjectsCTA />
         <Contact />
       </main>
     </SmoothScroll>

@@ -25,44 +25,56 @@ const projects = [
     description: "Mood-tracking app with real-time Firebase integration and emotional trend visualization. Fully responsive for seamless mobile and desktop use.",
     stack: ["Next.js", "Firebase", "Tailwind", "Recharts"],
     color: "from-purple-600 to-pink-500",
-    link: "#",
+    link: "https://toodl-pradyuman.netlify.app/",
+    github: "#"
+  },
+  {
+    id: 3,
+    title: "Coding Lantern",
+    category: "AI Productivity / EdTech",
+    description: "AI-powered developer productivity platform with real-time algorithm analysis, mistake tracking journaling, and optimization insights using Google Gemini AI.",
+    stack: ["Next.js 14", "MongoDB", "Tailwind", "Gemini AI"],
+    color: "from-orange-500 to-red-500",
+    link: "https://codinglantern.netlify.app/",
     github: "#"
   }
 ];
 
 export default function Projects() {
-  const sectionRef = useRef(null);
-  const triggerRef = useRef(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const pin = gsap.fromTo(sectionRef.current, 
-      { translateX: 0 },
-      { 
-        translateX: "-100vw", 
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-          trigger: triggerRef.current,
-          start: "top top",
-          end: "2000 top",
-          scrub: 0.6,
-          pin: true,
-        }
-      }
-    );
+    const section = sectionRef.current;
+    if (!section) return;
 
-    return () => {
-      pin.kill();
-    };
+    const ctx = gsap.context(() => {
+        const amount = section.scrollWidth - window.innerWidth;
+        
+        gsap.to(section, {
+          x: -amount,
+          ease: "none",
+          scrollTrigger: {
+            trigger: triggerRef.current,
+            start: "top top",
+            end: `+=${amount}`,
+            scrub: 0.6,
+            pin: true,
+            invalidateOnRefresh: true,
+          }
+        });
+    });
+
+    return () => ctx.revert();
   }, []);
 
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden" id="projects">
       <div ref={triggerRef}>
-        <div ref={sectionRef} className="h-screen w-[200vw] flex flex-row relative">
+        <div ref={sectionRef} className="h-screen flex flex-row relative w-max">
           
           {/* Intro Slide */}
-          <div className="w-screen h-full flex flex-col justify-center px-10 md:px-20 bg-black border-r border-white/10 z-10">
+          <div className="w-screen h-full flex flex-col justify-center px-10 md:px-20 bg-black border-r border-white/10 z-10 shrink-0">
             <h2 className="text-8xl md:text-9xl font-bold font-space text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
               FEATURED <br/> WORK
             </h2>
@@ -76,8 +88,8 @@ export default function Projects() {
           </div>
 
           {/* Projects Container (Horizontal) */}
-          <div className="w-screen h-full flex items-center bg-zinc-950">
-             <div className="flex gap-20 px-20">
+          <div className="h-full flex items-center bg-zinc-950 px-20">
+             <div className="flex gap-20">
                {projects.map((project) => (
                  <div key={project.id} className="relative group w-[400px] md:w-[600px] aspect-[4/3] bg-zinc-900 rounded-lg overflow-hidden border border-white/5 hover:border-purple-500/50 transition-all duration-500 hover:shadow-2xl hover:shadow-purple-500/20">
                    

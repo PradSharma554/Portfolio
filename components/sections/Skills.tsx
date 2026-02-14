@@ -1,60 +1,73 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { Code2, Layers } from 'lucide-react';
 
-const skills = [
-  { name: "Initial C++", level: 90 },
-  { name: "JavaScript (ES6+)", level: 95 },
-  { name: "Solidity / Web3", level: 80 },
-  { name: "React / Next.js", level: 95 },
-  { name: "Node.js", level: 85 },
-  { name: "Tailwind CSS", level: 98 },
-  { name: "MongoDB", level: 85 },
-  { name: "GSAP / Motion", level: 90 },
-  { name: "Three.js", level: 70 },
-  { name: "Git / CI/CD", level: 85 },
+const skillCategories = [
+  {
+    title: "Languages",
+    skills: ["C++", "JavaScript"]
+  },
+  {
+    title: "Backend",
+    skills: ["Node.js", "Express.js", "MongoDB"]
+  },
+  {
+    title: "Frontend",
+    skills: ["React.js", "Next.js", "Tailwind CSS"]
+  },
+  {
+    title: "Tools",
+    skills: ["Git", "GitHub", "Postman"]
+  },
+  {
+    title: "CS Fundamentals",
+    skills: ["OOPS", "DBMS", "OS", "DSA", "System Design"]
+  }
 ];
 
 export default function Skills() {
   return (
-    <section className="py-32 px-4 md:px-10 bg-black overflow-hidden">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row gap-20">
-          <div className="md:w-1/3">
-            <h2 className="text-5xl md:text-7xl font-bold font-space text-white mb-6">
-              TECH <br/> ARSENAL
-            </h2>
-            <p className="text-gray-400 text-lg">
-              A curated stack of tools and technologies I use to define the digital frontier.
-            </p>
-          </div>
+    <section className="py-16 px-4 md:px-10 bg-zinc-950 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black opacity-50" />
 
-          <div className="md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skills.map((skill, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 }}
-                viewport={{ once: true }}
-                whileHover={{ scale: 1.02 }}
-                className="group relative bg-zinc-900 border border-white/5 p-6 rounded-xl hover:border-purple-500/30 transition-colors"
-              >
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="text-xl font-bold text-gray-200 group-hover:text-purple-400 transition-colors">{skill.name}</h3>
-                  <span className="text-xs font-mono text-gray-600">{skill.level}%</span>
-                </div>
-                <div className="h-1 w-full bg-zinc-800 rounded-full overflow-hidden">
-                  <motion.div 
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.level}%` }}
-                    transition={{ duration: 1, delay: 0.5 + (index * 0.05) }}
-                    className="h-full bg-purple-500/50 group-hover:bg-purple-400 transition-colors"
-                  />
-                </div>
-              </motion.div>
-            ))}
+      <div className="max-w-5xl mx-auto relative z-10">
+        {/* Section Header */}
+        <div className="mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <Code2 className="w-6 h-6 text-purple-400" />
+            <h2 className="text-sm font-mono text-purple-400 uppercase tracking-widest">
+              Technical Skills
+            </h2>
           </div>
+          <h3 className="text-4xl md:text-6xl font-bold font-space text-white">
+            Tech Arsenal
+          </h3>
+        </div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {skillCategories.map((category, index) => (
+            <div
+              key={index}
+              className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300"
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <Layers className="w-5 h-5 text-purple-400" />
+                <h4 className="text-lg font-bold text-white">{category.title}</h4>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill, i) => (
+                  <span
+                    key={i}
+                    className="text-xs font-medium text-gray-300 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg hover:bg-purple-500/10 hover:border-purple-500/30 transition-colors"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
