@@ -26,7 +26,7 @@ export default function ProjectsCTA() {
         </div>
 
         {/* Content Card */}
-        <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300">
+        <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
           <div className="grid md:grid-cols-2 gap-8 items-center mb-8">
             {/* Description */}
             <div>
@@ -56,7 +56,7 @@ export default function ProjectsCTA() {
             ].map((project, i) => (
               <div
                 key={i}
-                className="bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-purple-500/10 hover:border-purple-500/30 transition-all cursor-pointer"
+                className="bg-white/5 border border-white/10 rounded-lg p-4 hover:bg-purple-500/10 hover:border-purple-500/30 hover:scale-105 hover:-translate-y-1 transition-all cursor-pointer"
                 onClick={() => router.push('/projects')}
               >
                 <p className="text-xs text-purple-400 font-mono mb-2">{project.category}</p>

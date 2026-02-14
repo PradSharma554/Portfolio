@@ -28,7 +28,7 @@ export default function Hobbies() {
           </h3>
         </div>
 
-        <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300">
+        <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:scale-[1.02] transition-all duration-300">
           <p className="text-gray-300 text-lg leading-relaxed mb-8">
             Beyond coding, I am passionate about music, singing, reading books, going to the gym, folk dancing, and traveling. These diverse interests keep me balanced and continuously inspire my creative problem-solving in tech.
           </p>
@@ -37,7 +37,7 @@ export default function Hobbies() {
             {hobbies.map((hobby, index) => (
               <div
                 key={index}
-                className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-purple-500/10 hover:border-purple-500/30 transition-all text-center"
+                className="bg-white/5 border border-white/10 rounded-xl p-4 hover:bg-purple-500/10 hover:border-purple-500/30 hover:scale-110 hover:-translate-y-1 transition-all text-center cursor-pointer"
               >
                 <hobby.icon className="w-8 h-8 text-purple-400 mx-auto mb-3" />
                 <p className="text-sm text-gray-300 font-medium">{hobby.name}</p>

@@ -71,7 +71,7 @@ export default function Achievements() {
               {achievements.map((achievement, index) => (
                 <div
                   key={index}
-                  className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-lg p-4 hover:border-purple-500/30 transition-all duration-300"
+                  className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-lg p-4 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:translate-x-1 transition-all duration-300"
                 >
                   <div className="flex items-start gap-3">
                     <span className="mt-1 w-2 h-2 bg-purple-400 rounded-full shrink-0" />
@@ -97,7 +97,7 @@ export default function Achievements() {
               <Target className="w-5 h-5 text-purple-400" />
               Areas of Interest
             </h4>
-            <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300">
+            <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:scale-[1.02] transition-all duration-300">
               <div className="space-y-3">
                 {interests.map((interest, index) => (
                   <div

@@ -50,7 +50,7 @@ export default function Skills() {
           {skillCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300"
+              className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:scale-[1.02] transition-all duration-300"
             >
               <div className="flex items-center gap-3 mb-6">
                 <Layers className="w-5 h-5 text-purple-400" />
@@ -60,7 +60,7 @@ export default function Skills() {
                 {category.skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="text-xs font-medium text-gray-300 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg hover:bg-purple-500/10 hover:border-purple-500/30 transition-colors"
+                    className="text-xs font-medium text-gray-300 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg hover:bg-purple-500/10 hover:border-purple-500/30 hover:scale-110 hover:-translate-y-0.5 transition-all cursor-pointer"
                   >
                     {skill}
                   </span>

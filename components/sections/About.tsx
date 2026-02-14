@@ -21,7 +21,7 @@ export default function About() {
         </div>
 
         <div className="space-y-8">
-          <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300">
+          <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:scale-[1.02] transition-all duration-300">
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
               I am a final-year Computer Science student at Chandigarh University, driven by a love for technology and innovation. Currently working as an SDE-1 Intern at Zopdev, I specialize in building high-performance web applications using Next.js and the modern stack.
             </p>
@@ -33,7 +33,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300">
+          <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:scale-[1.02] transition-all duration-300">
             <div className="flex items-center gap-3 mb-6">
               <Sparkles className="w-5 h-5 text-purple-400" />
               <h4 className="text-xl font-bold text-white">Quick Stats</h4>

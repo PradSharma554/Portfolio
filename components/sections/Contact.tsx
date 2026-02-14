@@ -38,7 +38,7 @@ export default function Contact() {
           {/* Email Card */}
           <a
             href="mailto:pradyumanmusic@gmail.com"
-            className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300 group"
+            className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:scale-[1.02] transition-all duration-300 group"
           >
             <div className="flex items-center gap-3 mb-4">
               <Mail className="w-5 h-5 text-purple-400" />
@@ -54,7 +54,7 @@ export default function Contact() {
           {/* Phone Card */}
           <a
             href="tel:+918580848682"
-            className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300 group"
+            className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:scale-[1.02] transition-all duration-300 group"
           >
             <div className="flex items-center gap-3 mb-4">
               <MapPin className="w-5 h-5 text-purple-400" />
@@ -70,7 +70,7 @@ export default function Contact() {
         </div>
 
         {/* Social Links Card */}
-        <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 transition-all duration-300">
+        <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300">
           <div className="flex items-center justify-between flex-wrap gap-6">
             <div>
               <h4 className="text-lg font-bold text-white mb-2">Connect With Me</h4>
@@ -89,7 +89,7 @@ export default function Contact() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-purple-500/10 hover:border-purple-500/30 transition-all"
+                  className="p-3 bg-white/5 border border-white/10 rounded-lg hover:bg-purple-500/10 hover:border-purple-500/30 hover:scale-110 hover:-translate-y-1 transition-all"
                 >
                   <item.icon className="w-5 h-5" />
                 </a>
