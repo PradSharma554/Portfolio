@@ -26,7 +26,8 @@ export default function Hero() {
           transition={{ delay: 0.5, duration: 1 }}
           className="text-gray-400 text-lg sm:text-2xl max-w-2xl mx-auto mb-10 font-light"
         >
-          Creative Developer & Software Engineer crafting high-impact digital experiences.
+          Backend-focused Software Engineer building reliable systems in TypeScript, Node.js and
+          PostgreSQL.
         </motion.p>
 
         <motion.div

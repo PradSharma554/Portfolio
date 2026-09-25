@@ -21,10 +21,11 @@ export default function About() {
         <div className="space-y-8">
           <div className="bg-gradient-to-br from-zinc-900 to-zinc-900/50 border border-white/10 rounded-2xl p-6 md:p-8 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10 hover:scale-[1.02] transition-all duration-300">
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              I am a final-year Computer Science student at Chandigarh University, driven by a love
-              for technology and innovation. Currently working as an SDE-1 Intern at Zopdev, I
-              specialize in building high-performance web applications using Next.js and the modern
-              stack.
+              I am a Computer Science graduate from Chandigarh University (2026) focused on backend
+              engineering. I spent a year as a Software Engineer Intern at Zopdev building a
+              multi-cloud cost optimization platform, and I now build backend systems in TypeScript,
+              Node.js and PostgreSQL: crash-resumable crawlers, MCP endpoints and LLM tracing
+              infrastructure.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
               My journey is defined by a relentless pursuit of excellence—combining creative design
@@ -55,11 +56,11 @@ export default function About() {
                 <p className="text-sm text-gray-400">DSA Problems Solved</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-purple-400 mb-2">1538</p>
+                <p className="text-4xl font-bold text-purple-400 mb-2">1703</p>
                 <p className="text-sm text-gray-400">LeetCode Peak Rating</p>
               </div>
               <div>
-                <p className="text-4xl font-bold text-purple-400 mb-2">7.99</p>
+                <p className="text-4xl font-bold text-purple-400 mb-2">8.14</p>
                 <p className="text-sm text-gray-400">CGPA / 10</p>
               </div>
             </div>

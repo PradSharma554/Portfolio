@@ -9,6 +9,30 @@ import ScrollReveal from '@/components/animations/ScrollReveal';
 
 const projects = [
   {
+    id: 5,
+    title: 'LLM Execution Inspector',
+    category: 'Observability / AI Infra',
+    description:
+      'Chrome DevTools for AI applications. A tracing SDK wraps any LLM client via a JS Proxy and uses AsyncLocalStorage to reconstruct execution trees (retrieval, tool calls, retries) with zero context threading. Captures time-to-first-token and prompt-cache token splits from the SSE stream, and cuts trace payloads 250x (72KB to 290B) with SHA-256 content-addressed storage and async gzip.',
+    stack: ['TypeScript', 'Express', 'PostgreSQL', 'Cloudflare R2'],
+    color: 'from-emerald-500 to-teal-500',
+    link: 'https://llm-inspector.vercel.app',
+    github: 'https://github.com/PradSharma554/LLM-Inspector',
+    image: null,
+  },
+  {
+    id: 4,
+    title: 'CloudAIr',
+    category: 'Backend / AI Infra',
+    description:
+      "An access layer between websites and AI agents (GPTBot, ClaudeBot, Perplexity). A robots.txt-compliant crawler generates each site's llms.txt via Gemini, serves clean markdown mirrors, and exposes content through per-site MCP endpoints. Crawls are crash-resumable via per-page PostgreSQL checkpoints and heartbeat recovery, verified by resuming a SIGKILL-interrupted crawl with zero lost work.",
+    stack: ['TypeScript', 'Express', 'Next.js', 'PostgreSQL', 'Gemini API', 'MCP'],
+    color: 'from-sky-500 to-indigo-500',
+    link: null,
+    github: 'https://github.com/PradSharma554/CloudAIr',
+    image: null,
+  },
+  {
     id: 3,
     title: 'Coding Lantern',
     category: 'AI Productivity / EdTech',
@@ -69,8 +93,7 @@ export default function ProjectsPage() {
               Featured Work
             </h1>
             <p className="text-xl md:text-2xl text-zinc-400 max-w-2xl leading-relaxed">
-              A selection of projects exploring the intersection of design, blockchain, and user
-              experience.
+              Backend and AI infrastructure projects, plus earlier full-stack and blockchain work.
             </p>
           </div>
         </ScrollReveal>
@@ -94,7 +117,7 @@ export default function ProjectsPage() {
                 ) : (
                   // Others: Link to Live Demo
                   <a
-                    href={project.link}
+                    href={project.link ?? project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`block cursor-pointer relative aspect-[4/3] md:aspect-video rounded-3xl overflow-hidden bg-zinc-900 border border-white/10 group-hover:border-purple-500/50 transition-all duration-500 group-hover:shadow-2xl group-hover:shadow-purple-500/10 ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}
@@ -147,7 +170,7 @@ export default function ProjectsPage() {
                       <span className="font-medium">Source</span>
                     </a>
 
-                    {project.id !== 1 && (
+                    {project.id !== 1 && project.link && (
                       <a
                         href={project.link}
                         target="_blank"
@@ -212,15 +235,25 @@ export default function ProjectsPage() {
 function ProjectImageContent({ project, index }: { project: any; index: number }) {
   return (
     <>
-      <Image
-        src={project.image}
-        alt={project.title}
-        fill
-        className="object-cover transition-transform duration-700 group-hover:scale-105"
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-        quality={85}
-        priority={index === 0}
-      />
+      {project.image ? (
+        <Image
+          src={project.image}
+          alt={project.title}
+          fill
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          quality={85}
+          priority={index === 0}
+        />
+      ) : (
+        <div
+          className={`absolute inset-0 flex items-center justify-center bg-gradient-to-br ${project.color} transition-transform duration-700 group-hover:scale-105`}
+        >
+          <span className="px-6 text-center text-3xl md:text-5xl font-bold font-space text-white/90">
+            {project.title}
+          </span>
+        </div>
+      )}
 
       {/* Gradient Overlay */}
       <div

@@ -15,7 +15,7 @@ const achievements = [
     category: 'Competitive Programming',
   },
   {
-    title: 'LeetCode Contest Rating: 1538',
+    title: 'LeetCode Contest Rating: 1703',
     description: 'Peak rating achieved through consistent competitive performance',
     category: 'Competitive Programming',
     link: 'https://leetcode.com/u/luffy554/',

@@ -15,9 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Pradyuman Sharma | Creative Developer',
+  title: 'Pradyuman Sharma | Software Engineer',
   description:
-    'Full Stack Developer focused on building high-impact, smooth, and aesthetic web experiences.',
+    'Backend-focused Software Engineer building reliable systems in TypeScript, Node.js and PostgreSQL.',
 };
 
 import HeroBackground from '@/components/canvas/HeroBackground';

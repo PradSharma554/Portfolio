@@ -7,8 +7,8 @@ const education = [
     degree: 'B.E. in Computer Science',
     institution: 'Chandigarh University',
     location: 'Chandigarh, India',
-    period: '2022 - 2026 (ongoing)',
-    cgpa: '7.99/10',
+    period: 'Aug 2022 - Apr 2026',
+    cgpa: '8.14/10',
   },
   {
     degree: 'Senior Secondary - Non-Medical',

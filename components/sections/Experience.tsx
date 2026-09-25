@@ -5,13 +5,15 @@ import { Briefcase, Calendar, Code } from 'lucide-react';
 const experiences = [
   {
     company: 'Zopdev',
-    role: 'SDE-1 Intern',
-    period: 'June 2025 – Present',
-    tech: ['Next.js', 'React.js', 'Tailwind CSS'],
+    role: 'Software Engineer Intern',
+    period: 'Jun 2025 - May 2026',
+    tech: ['Next.js 14', 'Tailwind CSS', 'TanStack Query', 'Zustand', 'Storybook'],
     points: [
-      'Designed and developed highly responsive and visual UIs.',
-      'Integrated PostHog for behavioral analytics and event tracking.',
-      'Utilized React Query for efficient API-backed state management.',
+      'Developed core features for Zopnight, a multi-cloud (AWS/GCP/Azure) cost optimization platform managing 5k+ cloud resources, including scheduling, budgets, cost recommendations, and unified dashboards.',
+      'Implemented a virtualized AdvanceTable supporting 50k+ rows with filtering, column reordering, and nested row expansion for large-scale cloud data.',
+      'Implemented API-driven state management with TanStack Query and Zustand, reducing redundant API calls by 40%, and integrated PostHog and Bugsnag for monitoring.',
+      'Improved Lighthouse scores from the 60-80 range to 100 across Performance, Accessibility, Best Practices, and SEO through code-splitting, lazy loading, and bundle optimization.',
+      'Built a Storybook-driven, atomic design-based reusable component architecture to enforce consistent UI standards.',
     ],
   },
 ];

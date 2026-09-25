@@ -5,19 +5,28 @@ import { Code2, Layers } from 'lucide-react';
 const skillCategories = [
   {
     title: 'Languages',
-    skills: ['C++', 'JavaScript'],
+    skills: ['TypeScript', 'JavaScript', 'C++', 'SQL'],
   },
   {
     title: 'Backend',
-    skills: ['Node.js', 'Express.js', 'MongoDB'],
+    skills: [
+      'Node.js',
+      'Express.js',
+      'REST APIs',
+      'PostgreSQL',
+      'Redis',
+      'OpenAPI',
+      'OAuth 2.0',
+      'JWT',
+    ],
   },
   {
     title: 'Frontend',
-    skills: ['React.js', 'Next.js', 'Tailwind CSS'],
+    skills: ['React.js', 'Next.js', 'Tailwind CSS', 'TanStack Query', 'Zustand'],
   },
   {
     title: 'Tools',
-    skills: ['Git', 'GitHub', 'Postman'],
+    skills: ['Git', 'GitHub', 'CI/CD', 'GitHub Actions', 'Docker', 'Postman'],
   },
   {
     title: 'CS Fundamentals',

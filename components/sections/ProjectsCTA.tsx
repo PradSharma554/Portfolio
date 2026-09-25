@@ -28,8 +28,8 @@ export default function ProjectsCTA() {
             {/* Description */}
             <div>
               <p className="text-gray-300 text-lg leading-relaxed">
-                Dive into a collection of projects showcasing blockchain innovation, full-stack
-                development, and AI-powered solutions.
+                Backend systems for the AI era: an access layer between websites and AI agents, and
+                DevTools-style tracing for LLM applications.
               </p>
             </div>
 
@@ -48,8 +48,8 @@ export default function ProjectsCTA() {
           {/* Project Preview Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 border-t border-white/10">
             {[
-              { name: 'SupplyGuard', category: 'Blockchain' },
-              { name: 'Toodl', category: 'Full Stack' },
+              { name: 'LLM Execution Inspector', category: 'Observability' },
+              { name: 'CloudAIr', category: 'Backend / AI Infra' },
               { name: 'Coding Lantern', category: 'AI Productivity' },
             ].map((project, i) => (
               <div
