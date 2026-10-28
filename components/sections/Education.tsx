@@ -1,6 +1,7 @@
 'use client';
 
-import { GraduationCap, Calendar } from 'lucide-react';
+import { GraduationCap } from 'lucide-react';
+import { Calendar } from '@/components/ui/icons';
 
 const education = [
   {

@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image'; // Import next/image for optimization
-import { ArrowLeft, Github, ExternalLink, ArrowUpRight } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight } from 'lucide-react';
+import { Github } from '@/components/ui/icons';
 // import SmoothScroll from '@/components/ui/SmoothScroll'; // Remove SmoothScroll if it feels heavy
 import ScrollReveal from '@/components/animations/ScrollReveal';
 
@@ -232,7 +233,13 @@ export default function ProjectsPage() {
 }
 
 // Helper component to avoid repetition
-function ProjectImageContent({ project, index }: { project: any; index: number }) {
+function ProjectImageContent({
+  project,
+  index,
+}: {
+  project: (typeof projects)[number];
+  index: number;
+}) {
   return (
     <>
       {project.image ? (

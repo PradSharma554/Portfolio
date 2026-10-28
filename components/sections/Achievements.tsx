@@ -1,6 +1,7 @@
 'use client';
 
-import { Trophy, Target } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Trophy } from '@/components/ui/icons';
 
 const achievements = [
   {

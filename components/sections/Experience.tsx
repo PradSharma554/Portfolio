@@ -1,6 +1,7 @@
 'use client';
 
-import { Briefcase, Calendar, Code } from 'lucide-react';
+import { Briefcase, Code } from 'lucide-react';
+import { Calendar } from '@/components/ui/icons';
 
 const experiences = [
   {

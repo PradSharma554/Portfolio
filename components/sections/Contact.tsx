@@ -1,12 +1,15 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Mail, MapPin, Linkedin, Github, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
+import { Linkedin, Github, Instagram, Twitter, Facebook } from '@/components/ui/icons';
 
 export default function Contact() {
   const [time, setTime] = useState<string>('');
 
   useEffect(() => {
+    // Set the clock on mount only (client-side) to avoid a server/client hydration mismatch.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setTime(new Date().toLocaleTimeString());
     const interval = setInterval(() => {
       setTime(new Date().toLocaleTimeString());
@@ -26,7 +29,7 @@ export default function Contact() {
             </h2>
           </div>
           <h3 className="text-4xl md:text-6xl font-bold font-space text-white">
-            Let's Work Together
+            Let&apos;s Work Together
           </h3>
         </div>
 

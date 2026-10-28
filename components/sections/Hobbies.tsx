@@ -1,6 +1,7 @@
 'use client';
 
-import { Heart, Music, BookOpen, Dumbbell, Footprints, Plane } from 'lucide-react';
+import { Heart, Dumbbell, Footprints, Plane } from 'lucide-react';
+import { Music, BookOpen } from '@/components/ui/icons';
 
 const hobbies = [
   { name: 'Music & Singing', icon: Music },

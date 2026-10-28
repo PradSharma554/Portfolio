@@ -40,8 +40,8 @@ export default function About() {
               . I am constantly evolving and get truly addicted to what I do.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed">
-              Let's connect if you're looking for a developer who's passionate about innovation and
-              cutting-edge technologies!
+              Let&apos;s connect if you&apos;re looking for a developer who&apos;s passionate about
+              innovation and cutting-edge technologies!
             </p>
           </div>
 
